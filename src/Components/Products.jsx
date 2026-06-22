@@ -12,7 +12,7 @@ const Products = ({ product}) => {
       <p className='product-card-price text-xl font-bold mt-3'>${product.price}</p>
 
       <div className='product-card-actions flex gap-2 mt-4'>
-        <Link><Button1 name="View Details"></Button1></Link>
+        <Link to={`/products/${product.id}`}><Button1 name="View Details"></Button1></Link>
         <Button2 name="Add to cart"></Button2>
       </div>    
     </div>

@@ -66,3 +66,7 @@ const products = [
 ];
 
 export default products;
+
+export function findProduct(id) {
+  return products.find((product) => product.id === id);
+}
