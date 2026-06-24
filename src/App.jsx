@@ -8,10 +8,12 @@ import Navbar from './Components/Navbar'
 import AuthProvider from './Context/AuthProvider'
 import AuthmodeProvider from './Context/AuthmodeProvider'
 import ProductDetails from './pages/ProductDetails'
+import CartProvider, { Cartcontext } from './Context/CartProvider'
 const App = () => {
   return (
     <AuthProvider>
       <AuthmodeProvider>
+        <CartProvider>
     <div className='bg-[whitesmoke] min-h-screen'>
       <Navbar></Navbar>
       <Routes>
@@ -21,6 +23,7 @@ const App = () => {
         <Route path='/products/:id' element={<ProductDetails></ProductDetails>}></Route>
       </Routes>
     </div>
+    </CartProvider>
     </AuthmodeProvider>
     </AuthProvider>
   )

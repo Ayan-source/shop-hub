@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { findProduct } from '../data/products'
+import Button1 from '../Components/Button1'
+import Button2 from '../Components/Button2'
 
 const ProductDetails = () => {
     const navigate = useNavigate()
@@ -49,6 +51,13 @@ const ProductDetails = () => {
             </p>
 
             <div className='mt-8 flex flex-wrap gap-3'>
+                <Link
+                to='/checkout'
+                className='inline-flex items-center justify-center rounded-lg border  px-5 py-3 font-semibold bg-[#007bff] text-white
+                transition hover:bg-blue-800'
+              >
+                Add to Cart
+              </Link>
               <Link
                 to='/'
                 className='inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-700 transition hover:bg-gray-50'
